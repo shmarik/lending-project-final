@@ -167,7 +167,7 @@ input:focus ~ label {
 }
 
 .green {
-  color: #3daa3d;
+  color: #4c629c;
 }
 
 .text-tren {
@@ -180,11 +180,11 @@ input:focus ~ label {
 }
 
 .green-cerkle {
-  border: solid #3daa3d;
+  border: solid #4c629c;
   border-radius: 50%;
   height: 432px;
   width: 432px;
-  background-color: #3daa3d;
+  background-color: #4c629c;
   display: flex;
   justify-content: center;
   position: relative;
@@ -240,7 +240,7 @@ input:focus ~ label {
   margin-top: 30px;
 }
 .na4 {
-  background: #3daa3d;
+  background: #4c629c;
   width: 125px;
   height: 47px;
   display: flex;
@@ -388,7 +388,7 @@ input:focus ~ label {
     z-index: 5;
     background-color: #c7c7c7;
     height: 70px;
-    border-top: solid #3daa3d 2px;
+    border-top: solid #4c629c 2px;
   }
 
   .burger {
@@ -481,11 +481,11 @@ input:focus ~ label {
   }
 
   .green-cerkle {
-    border: solid #3daa3d;
+    border: solid #4c629c;
     border-radius: 50%;
     height: 120px;
     width: 120px;
-    background-color: #3daa3d;
+    background-color: #4c629c;
     display: flex;
     justify-content: center;
     position: relative;
@@ -525,7 +525,7 @@ input:focus ~ label {
     justify-content: space-between;
   }
   .na4 {
-    background: #3daa3d;
+    background: #4c629c;
     width: 100px;
     height: 47px;
     display: flex;
