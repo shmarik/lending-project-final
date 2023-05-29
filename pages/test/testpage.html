@@ -96,6 +96,7 @@
         <div class="anwse-cont"><input type="radio" name="2" class="test-inp" onclick="tap(4, 4)"><p class="anwser">Регулярные занятия спортом</p></div>
       </div>
       <div class="result"></div>
+      <div class="coment result"></div>
       <button onclick="n()" class="res-but">Подвести итоги</button>
     </main>
   </div>
@@ -103,6 +104,7 @@
 
   <script>
     let result = document.querySelector(".result")
+    let coment = document.querySelector(".coment")
     let correct = [3, 1, 3, 2 ,1]
     let input = []
     let sum = 0
@@ -118,6 +120,24 @@
         }
       }
       result.innerHTML = `Ваш результат: ${sum} из 5`
+      if(sum == 1){
+        coment.innerHTML = `Cлабенько...`
+      }
+      else if(sum == 2){
+        coment.innerHTML = `Ну... норм`
+      }
+      else if(sum == 3){
+        coment.innerHTML = `3 из 5 неплохо`
+      }
+      else if(sum == 4){
+        coment.innerHTML = `Хорош`
+      }
+      else if(sum == 5){
+        coment.innerHTML = `Отлично`
+      }
+      else if(sum == 0){
+        coment.innerHTML = `(((`
+      }
     } 
   </script>
 </body>
