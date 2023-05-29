@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <title>УПРАЖНЕНИЯ</title>
+</head>
+
+<body>
+  <!--! логин меню (по дефолту скрыто) -->
+  <div class="login-cont">
+    <div class="logIn">
+      <h2>LOGIN</h2>
+      <div class="inp-box">
+        <input class="input"><label for="">MAIL</label>
+      </div>
+      <div class="inp-box">
+        <input class="input"><label for="">PASSWORD</label>
+      </div>
+      <button class="lgnBtn">Log In</button>
+      <span class=close></span>
+    </div>
+  </div>
+  <!--! Cоздал контейнер контент-->
+  <div class="content">
+    <!--! header для десктопа -->
+    <header class="header-for-pc">
+
+      <div class="nav-menu">
+        <div class="logo"><img src="../../images/logo.png" alt=""></div>
+        <div class="nav-buttons">
+          <div class="but"><a href="../../index.html">ДОМОЙ</a></div>
+          <div class="but"><a href="">УПРАЖНЕНИЯ</a></div>
+          <div class="but"><a href="../../pages/video/vid.html">ПИТАНИЕ</a></div>
+          <div class="but"><a href="../../pages/test/testpage.html">ТЕСТ</a></div>
+          <div class="log-in" onclick="createLogInMenu()">ВОЙТИ</div>
+        </div>
+      </div>
+      <!--! header для телефонов -->
+    </header>
+    <header class="header-for-phone">
+      <div class="logo"><img src="../../images/logo.png" alt="" class="r"></div>
+      <div class="burger-nav-and-burger">
+        <ul class="burger-nav">
+          <li><a href="../../index.html" class="nav-el"><img src="../../images/home.png" alt="" class="but-ico">
+              ДОМОЙ</a></li>
+          <li><a href="../../pages/uprajhneniya/upr.html" class="nav-el"><img src="../../images/upr.png" alt=""
+                class="but-ico">УПРАЖНЕНИЯ</a></li>
+          <li><a href="../../pages/video/vid.html" class="nav-el"><img src="../../images/video.png" alt=""
+                class="but-ico">ПИТАНИЕ</a></li>
+          <li><a href="../../pages/test/testpage.html" class="nav-el"> <img src="../../images/test.png" alt=""
+                class="but-ico"> ТЕСТ</a></li>
+        </ul>
+        <div class="log-in unselectable" onclick="createLogInMenu()">ВОЙТИ</div>
+      </div>
+    </header>
+
+    <main style="align-items: center;" >
+      <div class="question-block">
+        <div style="color: #fff; font-size: 30px;">aaaaaaa??????</div>
+        <div class="anwse-cont "><input type="radio" name="1" class="test-inp" onclick="tap(0, 1)"><p class="anwser">aaaaaaa</p></div>
+        <div class="anwse-cont"><input type="radio" name="1" class="test-inp" onclick="tap(0, 2)"><p class="anwser">aaaa</p></div>
+        <div class="anwse-cont"><input type="radio" name="1" class="test-inp" onclick="tap(0, 3)"><p class="anwser">bbbbb</p></div>
+        <div class="anwse-cont"><input type="radio" name="1" class="test-inp" onclick="tap(0, 4)"><p class="anwser">bbbb</p></div>
+      </div>
+      <div class="question-block">
+        <div style="color: #fff; font-size: 30px;">bbbb??????</div>
+        <div class="anwse-cont"><input type="radio" name="2" class="test-inp" onclick="tap(1, 1)"><p class="anwser">aaaaaaa</p></div>
+        <div class="anwse-cont"><input type="radio" name="2" class="test-inp" onclick="tap(1, 2)"><p class="anwser">aaaa</p></div>
+        <div class="anwse-cont"><input type="radio" name="2" class="test-inp" onclick="tap(1, 3)"><p class="anwser">bbbbb</p></div>
+        <div class="anwse-cont"><input type="radio" name="2" class="test-inp" onclick="tap(1, 4)"><p class="anwser">bbbb</p></div>
+      </div>
+      <div class="result"></div>
+      <button onclick="n()" class="res-but">Подвести итоги</button>
+    </main>
+  </div>
+  <script src="../../script.js"></script>
+
+  <script>
+    let result = document.querySelector(".result")
+    let correct = [1, 3]
+    let input = [0, 0]
+    let sum = 0
+    function tap(x, y) {
+      input.splice(x, 1, y)
+      console.log(input);
+    }
+    function n() {
+      sum = 0
+      for (i = 0; i < correct.length; i++) {
+        if (input[i] == correct[i]) {
+          sum += 1
+        }
+      }
+      result.innerHTML = `Ваш результат: ${sum}`
+    } 
+  </script>
+</body>
+
+</html>
